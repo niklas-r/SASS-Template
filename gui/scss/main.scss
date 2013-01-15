@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/**
+ * Inuit.CSS
+ *
+ */
+@import "../../inuit.css/inuit";
+
+/**
+ * Project Common
+ *
+ */
+@import "project-config/_vars";
+@import "project-config/_mixins";
+
+/**
+ * Project Components
+ *
+ */
+
+
+
+/**
+ * Responsive queries
+ *
+ */
+
+/* Large desktop */
+@media (min-width: $desktopLargeMinWidth) { 
+  // Optional: Create stylesheet for larger screens
+  @import "project-theme/desktop.scss";
+}
+  
+/* Portrait tablet to landscape and desktop */
+@media (min-width: $desktopMinWidth) and (max-width: $desktopMaxWidth) {
+  @import "project-theme/desktop.scss";
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: $tabletMaxWidth) {
+  @import "project-theme/tablets.scss";
+}
+
+/* Landscape phones and down */
+@media (max-width: $mobileMaxWidth) { 
+  @import "project-theme/mobile.scss";
+}
+
+/* For all screens and devices */
+@import "project-theme/foundation.scss";
